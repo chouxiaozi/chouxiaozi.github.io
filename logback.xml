@@ -1,0 +1,52 @@
+<!-- debug用于打印logback状态信息 -->
+
+<!-- scan="true"  修改的时候自动重载配置文件 -->
+<configuration debug="true">
+    <!-- logback  context名称，设置不可更改 --> 
+    <contextName>myAppName</contextName>
+    <!-- property声明变量，scope为变量作用范围 。调用方法为"${aName:-golden}，其中":-"为默认变量名。属性可以嵌套使用，例如${id:-${userid}}-->
+
+    <!-- 两个必要属性name和class -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+			
+	    <!-- 0或多个layout  含有一个class 必要属性 -->
+	    <!-- 0或多个encoder 含有一个class 必要属性-->
+	    <!-- 0或多个filter -->
+	    
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<!-- 配置状态监听 -->
+	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />  
+	<!-- 配置上下文监听 -->
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
+	
+	<!-- name为必须参数其他为可选参数 ，name对应创建的logger的名称，例如classname或者自定义的名字-->
+	<!-- level TRACE, DEBUG, INFO, WARN, ERROR, ALL or OFF.  -->
+	<!-- additivity  admitting the values true or false 是否生效-->
+    <logger name="test"level="debug" additivity="false" >
+     <!-- 0或多个appender-ref -->
+    </logger>
+    <!-- 根logger只能有level属性 -->
+	<root level="debug">
+	    <!-- 0或多个appender-ref 最好单独对应，不然会重复打印-->
+	    
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
+<!-- servlet查看log -->
+<!--  
+ <servlet>
+    <servlet-name>ViewStatusMessages</servlet-name>
+    <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ViewStatusMessages</servlet-name>
+    <url-pattern>/lbClassicStatus</url-pattern>
+  </servlet-mapping> 
+  -->
