@@ -3,4 +3,4 @@
 2、extremecomponents  https://code.google.com/p/extremetable/
 jsp分页标签  
 3、 flex http://flex.apache.org/ apache的flash sdk
-https://raw.githubusercontent.com/chouxiaozi/chouxiaozi.github.io/master/QQ%E6%88%AA%E5%9B%BE20150211001158.jpg
+![结构](https://raw.githubusercontent.com/chouxiaozi/chouxiaozi.github.io/master/QQ%E6%88%AA%E5%9B%BE20150211001158.jpg)
