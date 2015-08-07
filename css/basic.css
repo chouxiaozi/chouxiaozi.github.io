@@ -11,6 +11,10 @@ body {
     -webkit-box-sizing:border-box;
     font-family:arial,Hiragino Sans GB,宋体;
 }
+
+aside {
+    width: 30%;
+}
 code.block {
     border: solid 1px #ABCDF3;
     background: rgb(247,250,254);
