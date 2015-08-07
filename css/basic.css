@@ -1,279 +1,487 @@
-HTML {
-	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px
+html {
+    padding:0 0 0 0;
+    margin:0 0 0 0;
 }
-BODY {
-	BOX-SIZING: border-box; FONT-FAMILY: arial,Hiragino Sans GB,ËÎÌå; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 400px; MARGIN: 32px 0px 0px; PADDING-RIGHT: 0px; -webkit-box-sizing: border-box
+body {
+    margin-left:auto;
+    margin-right:auto;
+    padding:0 0 0 400px;
+    margin:32px 0 0 0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    font-family:arial,Hiragino Sans GB,å®‹ä½“;
 }
-CODE.block {
-	OVERFLOW: hidden; BORDER-TOP: #abcdf3 1px solid; FONT-FAMILY: droid sans mono, consolas, monaco; BORDER-RIGHT: #abcdf3 1px solid; BACKGROUND: rgb(247,250,254); BORDER-BOTTOM: #abcdf3 1px solid; BORDER-LEFT: #abcdf3 1px solid
+code.block {
+    border: solid 1px #ABCDF3;
+    background: rgb(247,250,254);
+    font-family:droid sans mono, consolas, monaco;
+    overflow:hidden;
 }
-H1 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
+h1,h2,h3,h4,h5,h6 {
+    color:#005A9C;
+    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; 
 }
-H2 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
-}
-H3 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
-}
-H4 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
-}
-H5 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
-}
-H6 {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
-}
-P:before {
-	CONTENT: "¡¡¡¡"
+p::before {
+    content:"ã€€ã€€";;
 }
 .note {
-	COLOR: darkgreen
+    color:darkgreen
 }
-UNKNOWN {
-	CONTENT: "¡¡¡¡×¢£º"
+.note>p:nth-child(1):before {
+    content:"ã€€ã€€æ³¨ï¼š";
 }
-CODE.block {
-	WHITE-SPACE: pre; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; PADDING-LEFT: 1em; MARGIN: 1em 2em; PADDING-RIGHT: 1em
+code.block
+{
+    white-space: pre;
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:2em;
+    margin-right:2em;
+    padding:1em 1em 1em 1em;
 }
-UL {
-	MARGIN: 1em
+
+ul,ol
+{
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:1em;
+    margin-right:1em;
 }
-OL {
-	MARGIN: 1em
+.block
+{
+    display: block;
 }
-.block {
-	DISPLAY: block
+table
+{
+    border-collapse: collapse;
+    border: solid 1px black;
 }
-TABLE {
-	BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid
+table td, table th
+{
+    border: solid 1px black;
 }
-TABLE TD {
-	BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid
+figure.table figcaption::before
+{
+    counter-increment: table;
+    content: "è¡¨" counter(table) " â€”â€” ";
 }
-TABLE TH {
-	BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid
+figure
+{
+    text-align: center;
 }
-figure.table figcaption:before {
-	COUNTER-INCREMENT: table; CONTENT: "±í" counter(table) " ¡ª¡ª "
+figure table
+{
+    margin-left: auto;
+    margin-right: auto;
 }
-figure {
-	TEXT-ALIGN: center
+body
+{
+    counter-reset: level1 0 table 0 annex 0 note 0;
 }
-figure TABLE {
-	MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+h1.chapter
+{
+    counter-reset: level2 0;
 }
-BODY {
-	COUNTER-RESET: level1 0 table 0 annex 0 note 0
+h2.chapter
+{
+    counter-reset: level3 0;
 }
-H1.chapter {
-	COUNTER-RESET: level2 0
+h3.chapter
+{
+    counter-reset: level4 0;
 }
-H2.chapter {
-	COUNTER-RESET: level3 0
+h4.chapter
+{
+    counter-reset: level5 0;
 }
-H3.chapter {
-	COUNTER-RESET: level4 0
+h5.chapter
+{
+    counter-reset: level6 0;
 }
-H4.chapter {
-	COUNTER-RESET: level5 0
+
+
+h1.chapter:before
+{
+    counter-increment: level1;
+    content: counter(level1) " ";
 }
-H5.chapter {
-	COUNTER-RESET: level6 0
+h2.chapter:before
+{
+    counter-increment: level2;
+    content: counter(level1) "." counter(level2) " ";
 }
-H1.chapter:before {
-	COUNTER-INCREMENT: level1; CONTENT: counter(level1) " "
+h3.chapter:before
+{
+    counter-increment: level3;
+    content: counter(level1) "." counter(level2) "." counter(level3) " ";
 }
-H2.chapter:before {
-	COUNTER-INCREMENT: level2; CONTENT: counter(level1) "." counter(level2) " "
+h4.chapter:before
+{
+    counter-increment: level4;
+    content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) " ";
 }
-H3.chapter:before {
-	COUNTER-INCREMENT: level3; CONTENT: counter(level1) "." counter(level2) "." counter(level3) " "
+h5.chapter:before
+{
+    counter-increment: level5;
+    content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) " ";
 }
-H4.chapter:before {
-	COUNTER-INCREMENT: level4; CONTENT: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) " "
+h6.chapter:before
+{
+    counter-increment: level6;
+    content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) "." counter(level6) " ";
 }
-H5.chapter:before {
-	COUNTER-INCREMENT: level5; CONTENT: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) " "
+
+h1.annex
+{
+    counter-reset: level2 0;
 }
-H6.chapter:before {
-	COUNTER-INCREMENT: level6; CONTENT: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) "." counter(level6) " "
+h2.annex
+{
+    counter-reset: level3 0;
 }
-H1.annex {
-	COUNTER-RESET: level2 0
+h3.annex
+{
+    counter-reset: level4 0;
 }
-H2.annex {
-	COUNTER-RESET: level3 0
+h1.annex:before
+{
+    counter-increment: annex;
+    content: "é™„å½•" counter(annex, upper-latin) " ";
 }
-H3.annex {
-	COUNTER-RESET: level4 0
+h2.annex:before
+{
+    counter-increment: level2;
+    content: counter(annex, upper-latin) "." counter(level2) " ";
 }
-H1.annex:before {
-	COUNTER-INCREMENT: annex; CONTENT: "¸½Â¼" counter(annex, upper-latin) " "
+h3.annex:before
+{
+    counter-increment: level3;
+    content: counter(annex, upper-latin) "." counter(level2) "." counter(level3) " ";
 }
-H2.annex:before {
-	COUNTER-INCREMENT: level2; CONTENT: counter(annex, upper-latin) "." counter(level2) " "
+ol
+{
+    list-style-type: decimal;
 }
-H3.annex:before {
-	COUNTER-INCREMENT: level3; CONTENT: counter(annex, upper-latin) "." counter(level2) "." counter(level3) " "
+
+ol ol
+{
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-left:0em;
+    margin-right:0em;
+    list-style-type: lower-latin;
 }
-OL {
-	LIST-STYLE-TYPE: decimal
+ol ol ol
+{
+    list-style-type: lower-roman;
 }
-OL OL {
-	LIST-STYLE-TYPE: lower-latin; MARGIN: 0em
+ol ol ol ol
+{
+    list-style-type: decimal;
 }
-OL OL OL {
-	LIST-STYLE-TYPE: lower-roman
+ol ol ol ol ol
+{
+    list-style-type: lower-latin;
 }
-OL OL OL OL {
-	LIST-STYLE-TYPE: decimal
+ol ol ol ol ol ol
+{
+    list-style-type: lower-roman;
 }
-OL OL OL OL OL {
-	LIST-STYLE-TYPE: lower-latin
+
+ol ul
+{
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-left:0em;
+    margin-right:0em;
 }
-OL OL OL OL OL OL {
-	LIST-STYLE-TYPE: lower-roman
-}
-OL UL {
-	MARGIN: 0em
-}
-UL OL {
-	MARGIN: 0em
+ul ol
+{
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-left:0em;
+    margin-right:0em;
 }
 #title {
-	TEXT-ALIGN: center
+    text-align:center;
 }
-.toc LI {
-	LIST-STYLE-TYPE: none
+
+
+.toc li {
+    list-style-type: none;
 }
-HTML {
-	HEIGHT: 100%; WIDTH: 100%
+html 
+{
+    height:100%;
+    width:100%;
 }
-BODY {
-	HEIGHT: 100%; WIDTH: 100%; -moz-box-orient: vertical; -webkit-box-orient: vertical; box-orient: vertical
+body 
+{
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+    -moz-box-orient : vertical; 
+    -webkit-box-orient : vertical; 
+    box-orient : vertical;
+    height:100%;
+    width: 100%;
 }
+
+
+
 .toc {
-	OVERFLOW: visible; WIDTH: auto; WHITE-SPACE: nowrap; PADDING-LEFT: 0px; COUNTER-RESET: toclevel1 0 tocannex 0
+    counter-reset: toclevel1 0 tocannex 0;
+    padding-left:0;
+    overflow:visible;
+    width:auto;
+    white-space:nowrap;
+
 }
-.toc A {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
+
+.toc a,a:link,a:visited{
+    color:#005A9C;
+    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; 
 }
-A:link {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
+.toc ol,li
+{
+    overflow:visible;
+    width:auto;
 }
-A:visited {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; COLOR: #005a9c
+
+.toc>li>a.chapter
+{
+    counter-reset: toclevel2 0;
 }
-.toc OL {
-	OVERFLOW: visible; WIDTH: auto
+.toc>li>ol>li>a.chapter
+{
+    counter-reset: toclevel3 0;
 }
-LI {
-	OVERFLOW: visible; WIDTH: auto
+.toc>li>ol>li>ol>li>a.chapter
+{
+    counter-reset: toclevel4 0;
 }
-.toc > LI > A.chapter {
-	COUNTER-RESET: toclevel2 0
+.toc>li>ol>li>ol>li>ol>li>a.chapter
+{
+    counter-reset: toclevel5 0;
 }
-.toc > LI > OL > LI > A.chapter {
-	COUNTER-RESET: toclevel3 0
+.toc>li>ol>li>ol>li>ol>li>ol>li>a.chapter
+{
+    counter-reset: toclevel6 0;
 }
-.toc > LI > OL > LI > OL > LI > A.chapter {
-	COUNTER-RESET: toclevel4 0
+
+
+.toc>li>a.annex
+{
+    counter-reset: toclevel2 0;
 }
-.toc > LI > OL > LI > OL > LI > OL > LI > A.chapter {
-	COUNTER-RESET: toclevel5 0
+.toc>li>ol>li>a.annex
+{
+    counter-reset: toclevel3 0;
 }
-.toc > LI > OL > LI > OL > LI > OL > LI > OL > LI > A.chapter {
-	COUNTER-RESET: toclevel6 0
+.toc>li>ol>li>ol>li>a.annex
+{
+    counter-reset: toclevel4 0;
 }
-.toc > LI > A.annex {
-	COUNTER-RESET: toclevel2 0
+
+
+.toc a.chapter:before
+{
+    counter-increment: toclevel1;
+    content: counter(toclevel1) " ";
 }
-.toc > LI > OL > LI > A.annex {
-	COUNTER-RESET: toclevel3 0
+.toc ol a.chapter:before
+{
+    counter-increment: toclevel2;
+    content: counter(toclevel1) "." counter(toclevel2) " ";
 }
-.toc > LI > OL > LI > OL > LI > A.annex {
-	COUNTER-RESET: toclevel4 0
+.toc ol ol a.chapter:before
+{
+    counter-increment: toclevel3;
+    content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) " ";
 }
-.toc A.chapter:before {
-	COUNTER-INCREMENT: toclevel1; CONTENT: counter(toclevel1) " "
+.toc ol ol ol a.chapter:before
+{
+    counter-increment: toclevel4;
+    content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) " ";
 }
-.toc OL A.chapter:before {
-	COUNTER-INCREMENT: toclevel2; CONTENT: counter(toclevel1) "." counter(toclevel2) " "
+.toc ol ol ol ol a.chapter:before
+{
+    counter-increment: toclevel5;
+    content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) " ";
 }
-.toc OL OL A.chapter:before {
-	COUNTER-INCREMENT: toclevel3; CONTENT: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) " "
+.toc ol ol ol ol ol a.chapter:before
+{
+    counter-increment: toclevel6;
+    content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) "." counter(toclevel6) " ";
 }
-.toc OL OL OL A.chapter:before {
-	COUNTER-INCREMENT: toclevel4; CONTENT: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) " "
+
+
+.toc a.annex:before
+{
+    counter-increment: tocannex;
+    content: "é™„å½•" counter(tocannex, upper-latin) " ";
 }
-.toc OL OL OL OL A.chapter:before {
-	COUNTER-INCREMENT: toclevel5; CONTENT: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) " "
+.toc ol a.annex:before
+{
+    counter-increment: toclevel2;
+    content: counter(tocannex, upper-latin) "." counter(toclevel2) " ";
 }
-.toc OL OL OL OL OL A.chapter:before {
-	COUNTER-INCREMENT: toclevel6; CONTENT: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) "." counter(toclevel6) " "
+.toc ol ol a.annex:before
+{
+    counter-increment: toclevel3;
+    content: counter(tocannex, upper-latin) "." counter(toclevel2) "." counter(toclevel3) " ";
 }
-.toc A.annex:before {
-	COUNTER-INCREMENT: tocannex; CONTENT: "¸½Â¼" counter(tocannex, upper-latin) " "
-}
-.toc OL A.annex:before {
-	COUNTER-INCREMENT: toclevel2; CONTENT: counter(tocannex, upper-latin) "." counter(toclevel2) " "
-}
-.toc OL OL A.annex:before {
-	COUNTER-INCREMENT: toclevel3; CONTENT: counter(tocannex, upper-latin) "." counter(toclevel2) "." counter(toclevel3) " "
-}
-.toc A {
-	CURSOR: pointer
+.toc a {
+    cursor:pointer;
 }
 #title {
-	TEXT-ALIGN: center
+    text-align:center;
 }
-header {
-	WIDTH: 100%
+header 
+{
+    width:100%;
 }
-nav {
-	FONT-FAMILY: "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; BACKGROUND: black; COLOR: white; Z-INDEX: 3; LINE-HEIGHT: 28px
+nav 
+{
+    z-index:3;
+    line-height:28px;
+    background:black;
+    color:white;
+    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif;
+
 }
-nav :link {
-	TEXT-DECORATION: none; COLOR: yellow; MARGIN: 0px 5px
+
+nav :link,:visited 
+{
+    color:Yellow;
+    margin:0px 5px 0px 5px;
+    text-decoration:none;
+
 }
-:visited {
-	TEXT-DECORATION: none; COLOR: yellow; MARGIN: 0px 5px
+nav :link:hover
+{
+    text-decoration:underline;
 }
-nav :hover:link {
-	TEXT-DECORATION: underline
+
+#userAvatar 
+{
+    margin:5px 5px 5px 5px;
 }
-#userAvatar {
-	MARGIN: 5px
+
+nav * 
+{
+    vertical-align:middle;
 }
-nav * {
-	VERTICAL-ALIGN: middle
+
+.mask 
+{
+    z-index:5;
+    background:rgba(0,0,0,.3);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+    -moz-box-orient : horizontal; 
+    -webkit-box-orient : horizontal; 
+    box-orient : horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;;
 }
-.mask {
-	HEIGHT: 100%; WIDTH: 100%; POSITION: fixed; LEFT: 0px; Z-INDEX: 5; TOP: 0px; -moz-box-orient: horizontal; -webkit-box-orient: horizontal; box-orient: horizontal; -webkit-box-pack: center; -webkit-box-align: center; -moz-box-pack: center; -moz-box-align: center
+
+.popup_content
+{
+    display:inline-block;
+    background:white;
+    border:solid 1px grey;
+    padding:1em 1em 1em 1em;
 }
-.popup_content {
-	BORDER-TOP: grey 1px solid; BORDER-RIGHT: grey 1px solid; BACKGROUND: white; BORDER-BOTTOM: grey 1px solid; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; PADDING-LEFT: 1em; BORDER-LEFT: grey 1px solid; DISPLAY: inline-block; PADDING-RIGHT: 1em
+
+.popup_content>*
+{
+    display:block;
 }
-.popup_content > * {
-	DISPLAY: block
+
+.popup_content>*
+{
+    display:block;
+    border:solid 1px grey;
+    box-sizing:border-box;
+    width:500px;
+    margin:1em 1em 1em 1em;
+    
 }
-.popup_content > * {
-	BOX-SIZING: border-box; BORDER-TOP: grey 1px solid; BORDER-RIGHT: grey 1px solid; WIDTH: 500px; BORDER-BOTTOM: grey 1px solid; BORDER-LEFT: grey 1px solid; MARGIN: 1em; DISPLAY: block
+
+.popup_content>textarea
+{
+    height:350px;
 }
-.popup_content > TEXTAREA {
-	HEIGHT: 350px
+
+
+
+aside
+{
+    width:400px;
+    height:100%;
+    overflow:scroll;
+    margin: 0 0 0 0;
+    background:white;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;  
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:2;
+    margin:0 0 0 0;
+    position:fixed;
 }
-aside {
-	BOX-SIZING: border-box; OVERFLOW: scroll; HEIGHT: 100%; WIDTH: 400px; BACKGROUND: white; POSITION: fixed; LEFT: 0px; MARGIN: 0px; Z-INDEX: 2; TOP: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
-}
-#main {
-	BOX-SIZING: border-box; BORDER-TOP: transparent 32px solid; HEIGHT: 100%; WIDTH: 100%; OVERFLOW-X: hidden; OVERFLOW-Y: scroll; POSITION: absolute; LEFT: 0px; BORDER-LEFT: transparent 400px solid; MARGIN: 0px; TOP: 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box
+#main
+{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;    
+    overflow-x:hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    border-left:solid transparent 400px;
+    border-top:solid transparent 32px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin:0 0 0 0;
 }
 #content {
-	PADDING-BOTTOM: 1em; PADDING-TOP: 1em; PADDING-LEFT: 1em; PADDING-RIGHT: 1em
+    padding:1em 1em 1em 1em;
 }
-nav {
-	HEIGHT: 32px; WIDTH: 100%; POSITION: absolute; LEFT: 0px; TOP: 0px
+
+nav 
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:32px;
 }
+/*
+
+@media only screen and (max-width: 1200px) {
+    aside {
+        position:fixed;
+        height:0;
+    }
+    article {
+        max-width:800px;
+        height:auto;
+        overflow:visible;
+    }
+    #main {
+        border-left:solid 0px;
+    }
+}*/
