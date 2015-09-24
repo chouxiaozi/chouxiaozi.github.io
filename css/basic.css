@@ -1,476 +1,471 @@
 html {
-    padding:0 0 0 0;
-    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
+
 body {
-    margin-left:auto;
-    margin-right:auto;
-    padding:0 0 0 400px;
-    margin:32px 0 0 0;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    font-family:arial,Hiragino Sans GB,宋体;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 32px 0 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: arial, Hiragino Sans GB, 宋体;
 }
 
 code.block {
     border: solid 1px #ABCDF3;
-    background: rgb(247,250,254);
-    font-family:droid sans mono, consolas, monaco;
-    overflow:hidden;
-}
-h1,h2,h3,h4,h5,h6 {
-    color:#005A9C;
-    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; 
-}
-p::before {
-    content:"　　";;
-}
-.note {
-    color:darkgreen
-}
-.note>p:nth-child(1):before {
-    content:"　　注：";
-}
-code.block
-{
-    white-space: pre;
-    margin-top:1em;
-    margin-bottom:1em;
-    margin-left:2em;
-    margin-right:2em;
-    padding:1em 1em 1em 1em;
+    background: rgb(247, 250, 254);
+    font-family: droid sans mono, consolas, monaco;
+    overflow: hidden;
 }
 
-ul,ol
-{
-    margin-top:1em;
-    margin-bottom:1em;
-    margin-left:1em;
-    margin-right:1em;
+h1, h2, h3, h4, h5, h6 {
+    color: #005A9C;
+    font-family: "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
-.block
-{
+
+p::before {
+    content: "　　";;
+}
+
+.note {
+    color: darkgreen
+}
+
+.note > p:nth-child(1):before {
+    content: "　　注：";
+}
+
+code.block {
+    white-space: pre;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 1em 1em 1em 1em;
+}
+
+ul, ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.block {
     display: block;
 }
-table
-{
+
+table {
     border-collapse: collapse;
     border: solid 1px black;
 }
-table td, table th
-{
+
+table td, table th {
     border: solid 1px black;
 }
-figure.table figcaption::before
-{
+
+figure.table figcaption::before {
     counter-increment: table;
     content: "表" counter(table) " —— ";
 }
-figure
-{
+
+figure {
     text-align: center;
 }
-figure table
-{
+
+figure table {
     margin-left: auto;
     margin-right: auto;
 }
-body
-{
+
+body {
     counter-reset: level1 0 table 0 annex 0 note 0;
 }
-h1.chapter
-{
+
+h1.chapter {
     counter-reset: level2 0;
 }
-h2.chapter
-{
+
+h2.chapter {
     counter-reset: level3 0;
 }
-h3.chapter
-{
+
+h3.chapter {
     counter-reset: level4 0;
 }
-h4.chapter
-{
+
+h4.chapter {
     counter-reset: level5 0;
 }
-h5.chapter
-{
+
+h5.chapter {
     counter-reset: level6 0;
 }
 
-
-h1.chapter:before
-{
+h1.chapter:before {
     counter-increment: level1;
     content: counter(level1) " ";
 }
-h2.chapter:before
-{
+
+h2.chapter:before {
     counter-increment: level2;
     content: counter(level1) "." counter(level2) " ";
 }
-h3.chapter:before
-{
+
+h3.chapter:before {
     counter-increment: level3;
     content: counter(level1) "." counter(level2) "." counter(level3) " ";
 }
-h4.chapter:before
-{
+
+h4.chapter:before {
     counter-increment: level4;
     content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) " ";
 }
-h5.chapter:before
-{
+
+h5.chapter:before {
     counter-increment: level5;
     content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) " ";
 }
-h6.chapter:before
-{
+
+h6.chapter:before {
     counter-increment: level6;
     content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) "." counter(level6) " ";
 }
 
-h1.annex
-{
+h1.annex {
     counter-reset: level2 0;
 }
-h2.annex
-{
+
+h2.annex {
     counter-reset: level3 0;
 }
-h3.annex
-{
+
+h3.annex {
     counter-reset: level4 0;
 }
-h1.annex:before
-{
+
+h1.annex:before {
     counter-increment: annex;
     content: "附录" counter(annex, upper-latin) " ";
 }
-h2.annex:before
-{
+
+h2.annex:before {
     counter-increment: level2;
     content: counter(annex, upper-latin) "." counter(level2) " ";
 }
-h3.annex:before
-{
+
+h3.annex:before {
     counter-increment: level3;
     content: counter(annex, upper-latin) "." counter(level2) "." counter(level3) " ";
 }
-ol
-{
+
+ol {
     list-style-type: decimal;
 }
 
-ol ol
-{
-    margin-top:0em;
-    margin-bottom:0em;
-    margin-left:0em;
-    margin-right:0em;
+ol ol {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
     list-style-type: lower-latin;
 }
-ol ol ol
-{
-    list-style-type: lower-roman;
-}
-ol ol ol ol
-{
-    list-style-type: decimal;
-}
-ol ol ol ol ol
-{
-    list-style-type: lower-latin;
-}
-ol ol ol ol ol ol
-{
+
+ol ol ol {
     list-style-type: lower-roman;
 }
 
-ol ul
-{
-    margin-top:0em;
-    margin-bottom:0em;
-    margin-left:0em;
-    margin-right:0em;
+ol ol ol ol {
+    list-style-type: decimal;
 }
-ul ol
-{
-    margin-top:0em;
-    margin-bottom:0em;
-    margin-left:0em;
-    margin-right:0em;
+
+ol ol ol ol ol {
+    list-style-type: lower-latin;
 }
+
+ol ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
+ol ul {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+ul ol {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
 #title {
-    text-align:center;
+    text-align: center;
 }
-
 
 .toc li {
     list-style-type: none;
 }
-html 
-{
-    height:100%;
-    width:100%;
-}
-body 
-{
-    display:-webkit-box;
-    display:-moz-box;
-    display:box;
-    -moz-box-orient : vertical; 
-    -webkit-box-orient : vertical; 
-    box-orient : vertical;
-    height:100%;
+
+html {
+    height: 100%;
     width: 100%;
 }
 
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    height: 100%;
+    width: 100%;
+}
 
+.spycont {
+    margin: 10px;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.spyrow {
+    height: 100%;
+    overflow: auto;
+}
+
+.spy {
+    height: 100%;
+    overflow: auto;
+}
 
 .toc {
     counter-reset: toclevel1 0 tocannex 0;
-    padding-left:0;
-    overflow:visible;
-    width:auto;
-    white-space:nowrap;
-
+    white-space: nowrap;
 }
 
-.toc a,a:link,a:visited{
-    color:#005A9C;
-    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif; 
-}
-.toc ol,li
-{
-    overflow:visible;
-    width:auto;
+.toc a, a:link, a:visited {
+    color: #005A9C;
+    font-family: "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
 
-.toc>li>a.chapter
-{
+.toc ol, li {
+    overflow: visible;
+    width: auto;
+}
+
+.toc > li > a.chapter {
     counter-reset: toclevel2 0;
 }
-.toc>li>ol>li>a.chapter
-{
+
+.toc > li > ol > li > a.chapter {
     counter-reset: toclevel3 0;
 }
-.toc>li>ol>li>ol>li>a.chapter
-{
+
+.toc > li > ol > li > ol > li > a.chapter {
     counter-reset: toclevel4 0;
 }
-.toc>li>ol>li>ol>li>ol>li>a.chapter
-{
+
+.toc > li > ol > li > ol > li > ol > li > a.chapter {
     counter-reset: toclevel5 0;
 }
-.toc>li>ol>li>ol>li>ol>li>ol>li>a.chapter
-{
+
+.toc > li > ol > li > ol > li > ol > li > ol > li > a.chapter {
     counter-reset: toclevel6 0;
 }
 
-
-.toc>li>a.annex
-{
+.toc > li > a.annex {
     counter-reset: toclevel2 0;
 }
-.toc>li>ol>li>a.annex
-{
+
+.toc > li > ol > li > a.annex {
     counter-reset: toclevel3 0;
 }
-.toc>li>ol>li>ol>li>a.annex
-{
+
+.toc > li > ol > li > ol > li > a.annex {
     counter-reset: toclevel4 0;
 }
 
-
-.toc a.chapter:before
-{
+.toc a.chapter:before {
     counter-increment: toclevel1;
     content: counter(toclevel1) " ";
 }
-.toc ol a.chapter:before
-{
+
+.toc ol a.chapter:before {
     counter-increment: toclevel2;
     content: counter(toclevel1) "." counter(toclevel2) " ";
 }
-.toc ol ol a.chapter:before
-{
+
+.toc ol ol a.chapter:before {
     counter-increment: toclevel3;
     content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) " ";
 }
-.toc ol ol ol a.chapter:before
-{
+
+.toc ol ol ol a.chapter:before {
     counter-increment: toclevel4;
     content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) " ";
 }
-.toc ol ol ol ol a.chapter:before
-{
+
+.toc ol ol ol ol a.chapter:before {
     counter-increment: toclevel5;
     content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) " ";
 }
-.toc ol ol ol ol ol a.chapter:before
-{
+
+.toc ol ol ol ol ol a.chapter:before {
     counter-increment: toclevel6;
     content: counter(toclevel1) "." counter(toclevel2) "." counter(toclevel3) "." counter(toclevel4) "." counter(toclevel5) "." counter(toclevel6) " ";
 }
 
-
-.toc a.annex:before
-{
+.toc a.annex:before {
     counter-increment: tocannex;
     content: "附录" counter(tocannex, upper-latin) " ";
 }
-.toc ol a.annex:before
-{
+
+.toc ol a.annex:before {
     counter-increment: toclevel2;
     content: counter(tocannex, upper-latin) "." counter(toclevel2) " ";
 }
-.toc ol ol a.annex:before
-{
+
+.toc ol ol a.annex:before {
     counter-increment: toclevel3;
     content: counter(tocannex, upper-latin) "." counter(toclevel2) "." counter(toclevel3) " ";
 }
+
 .toc a {
-    cursor:pointer;
+    cursor: pointer;
 }
+
 #title {
-    text-align:center;
+    text-align: center;
 }
-header 
-{
-    width:100%;
+
+header {
+    width: 100%;
 }
-nav 
-{
-    z-index:3;
-    line-height:28px;
-    background:black;
-    color:white;
-    font-family:"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft YaHei",sans-serif;
+
+nav {
+    z-index: 3;
+    line-height: 28px;
+    background: black;
+    color: white;
+    font-family: "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 
 }
 
-nav :link,:visited 
-{
-    color:Yellow;
-    margin:0px 5px 0px 5px;
-    text-decoration:none;
+nav :link, :visited {
+    color: Yellow;
+    margin: 0px 5px 0px 5px;
+    text-decoration: none;
 
 }
-nav :link:hover
-{
-    text-decoration:underline;
+
+nav :link:hover {
+    text-decoration: underline;
 }
 
-#userAvatar 
-{
-    margin:5px 5px 5px 5px;
+#userAvatar {
+    margin: 5px 5px 5px 5px;
 }
 
-nav * 
-{
-    vertical-align:middle;
+nav * {
+    vertical-align: middle;
 }
 
-.mask 
-{
-    z-index:5;
-    background:rgba(0,0,0,.3);
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-    display:-webkit-box;
-    display:-moz-box;
-    display:box;
-    -moz-box-orient : horizontal; 
-    -webkit-box-orient : horizontal; 
-    box-orient : horizontal;
+.mask {
+    z-index: 5;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
     -webkit-box-pack: center;
     -webkit-box-align: center;
     -moz-box-pack: center;
     -moz-box-align: center;;
 }
 
-.popup_content
-{
-    display:inline-block;
-    background:white;
-    border:solid 1px grey;
-    padding:1em 1em 1em 1em;
+.popup_content {
+    display: inline-block;
+    background: white;
+    border: solid 1px grey;
+    padding: 1em 1em 1em 1em;
 }
 
-.popup_content>*
-{
-    display:block;
+.popup_content > * {
+    display: block;
 }
 
-.popup_content>*
-{
-    display:block;
-    border:solid 1px grey;
-    box-sizing:border-box;
-    width:500px;
-    margin:1em 1em 1em 1em;
-    
+.popup_content > * {
+    display: block;
+    border: solid 1px grey;
+    box-sizing: border-box;
+    width: 500px;
+    margin: 1em 1em 1em 1em;
+
 }
 
-.popup_content>textarea
-{
-    height:350px;
+.popup_content > textarea {
+    height: 350px;
 }
 
-
-
-aside
-{
-    width:30%;
+aside {
+    width: 30%;
     max-width: 400px;
-    height:100%;
-    overflow:scroll;
+    height: 100%;
+    overflow: scroll;
     margin: 0 0 0 0;
-    background:white;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;  
-    position:absolute;
-    top:0px;
-    left:0px;
-    z-index:2;
-    margin:0 0 0 0;
-    position:fixed;
-}
-#main
-{
-    width:100%;
-    height:100%;
-    overflow-y:scroll;    
-    overflow-x:hidden;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    border-left:solid transparent 400px;
-    border-top:solid transparent 32px;
-    position:absolute;
-    top:0px;
-    left:0px;
-    margin:0 0 0 0;
-}
-#content {
-    padding:1em 1em 1em 1em;
+    background: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    margin: 0 0 0 0;
+    position: fixed;
 }
 
-nav 
-{
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:32px;
+#main {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: solid transparent 400px;
+    border-top: solid transparent 32px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0 0 0 0;
 }
+
+#content {
+    padding: 1em 1em 1em 1em;
+}
+
+nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+}
+
 /*
 
 @media only screen and (max-width: 1200px) {
@@ -487,3 +482,41 @@ nav
         border-left:solid 0px;
     }
 }*/
+
+ol.toc li {
+    display: none;
+}
+
+/**
+class=toc 下面的li都显示
+*/
+ol.toc > li, ol.toc .active, ol.toc .active > ol > li, ol.toc .active + li, ol.toc li:hover > ol > li {
+    display: block;
+}
+
+.active a, ol.toc a:hover {
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+    padding-left: 5px;
+}
+
+/**
+超链接自动换行
+*/
+ol.toc a {
+    display: block;
+    width: 100%; /* 必须定义宽度 */
+    word-wrap: break-word; /* IE */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    white-space: -hp-pre-wrap; /* HP printers */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+}
+
+ol.toc ol {
+    -webkit-padding-start: 30px;
+}
